@@ -1,0 +1,86 @@
+{% extends 'app/home.html' %}
+{% load static %}
+{% block content %}
+ <!------------- 
+    <div class="container">
+    <h2>Registro de Usuarios </h2>
+    <hr>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form}}
+
+        <a href="{% url 'home' %}">Volver</a> |
+        <a href="{% url 'login' %}">Iniciar Sesion</a>
+        <input type="submit" value="Registrar" class="btn btn-success float-right">
+    </form>            
+</div>
+</html>
+------------->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='{% static "/login1.css" %}'>
+    <title>Login</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container main">
+        <div class="row">
+            <div class="col-md-6 side-image">
+                       
+                <!-------------      image     ------------->
+                
+                <img src="images/white.png" alt="">
+              
+            </div>
+
+            <div class="col-md-6 right">
+                
+                <div class="input-box">
+                    <form id="formulario" action="" method="post">
+                    {% csrf_token %}        
+                    <header>Registrate</header>
+                        <div class="input-field">
+                            <input type="text" class="input" name="username" id="username" autocomplete="off" required="">
+                            <label for="username">Usuario</label> 
+                        </div>
+                        <div class="input-field">
+                            <input type="text" class="input" id="first_name" name="first_name" autocomplete="off" required="">
+                            <label for="first_name">Nombre</label> 
+                        </div>
+                        <div class="input-field">
+                            <input type="text" class="input" id="last_name" name="last_name" autocomplete="off" required="">
+                            <label for="last_name">Apellidos</label> 
+                        </div> 
+                        <div class="input-field">
+                            <input type="email" class="input" id="email" name="email" autocomplete="off" required="">
+                            <label for="email">Correo</label>
+                        </div> 
+                        <div class="input-field">
+                            <input type="password" class="input" name="password1" id="password1" required="">
+                            <label for="password1">Contraseña</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" class="input" name="password2" id="password2" required="">
+                            <label for="password2">Verificar contraseña</label>
+                        </div> 
+                        <div class="input-field">
+                            <input type="submit" class="submit" value="Registrarse">
+                        </div>
+                    </form>
+                   <div class="signin">
+                    <span>Ya tienes cuenta? <a href="{% url 'login' %}">Ingresa aqui</a></span>
+                   </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src='{% static "/form.js" %}'></script>
+</body>
+</html>
+
+{% endblock %}

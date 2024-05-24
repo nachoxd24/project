@@ -1,0 +1,28 @@
+{% extends 'app/home.html' %}
+{% block content %}
+<style>
+    .card {
+        margin-top: 5%;
+    }
+</style>
+<div class="row justify-content-center">
+    <div class="card text-center w-50">
+        <div class="card-body">
+            <h5 class="card-title">ELIMINAR USUARIO</h5>
+            <p class="card-text">¿Estás seguro que deseas eliminar este usuario?</p>
+            <form method="post">
+                {% csrf_token %}
+                <label for="username">Nombre de usuario: {{usuario.username}}</label>
+                <br>
+                <label for="email">Correo electrónico: {{usuario.email}}</label>
+                <br>
+                <br>
+                <button class="btn btn-danger" type="submit">Eliminar</button>
+                <a href="{% url 'lista_usuarios'  %}">Volver</a>
+            </form>
+        </div>
+    </div>
+</div>
+    
+
+{% endblock %}

@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+	font-family: 'Poppins', sans-serif;
+}
+
+.wrapper{
+    padding: 0 20px 0 20px;
+}
+
+body {
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Poppins', sans-serif;
+}
+
+
+.container {
+	display: flex;
+    margin-top: 5%;
+	flex-direction: column;
+	box-shadow: 8px 8px 5px 0px #bdbdbdbf;
+	width: 80%;
+	background-color: #ffffff;
+	border-radius: 30px;
+}
+
+.table_header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 30px 0;
+}
+
+button {
+	outline: none;
+	border: none;
+	background-color: #489c26;
+	color: #ffffff;
+	padding: 10px 30px;
+	border-radius: 20px;
+	text-transform: uppercase;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #6acc44;
+}
+
+select {
+	border: none;
+	border-bottom: 1px solid #c9c9c9;
+	width: 200px;
+	padding: 10px 0;
+	font-size: 16px;
+}
+
+.input_search {
+	position: relative;
+}
+
+.input_search input {
+	border-radius: 30px;
+	width: 400px;
+	outline: none;
+	padding: 10px 20px;
+	border: 1px solid #c9c9c9;
+	box-sizing: border-box;
+	padding-right: 50px;
+}
+
+.input_search #search {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	margin-right: 1rem;
+	transform: translate(-50%, -50%);
+}
+
+table {
+	border-spacing: 0;
+	margin-top: 1rem;
+}
+
+thead {
+	background-color: #fff7b3;
+}
+
+th {
+	padding: 10px;
+}
+
+tbody tr {
+	border-bottom: 1px solid #dfdfdf;
+}
+
+tbody td {
+	padding: 10px;
+	border-bottom: 1px solid #dfdfdf;
+	text-align: center;
+}
+
+tbody td #icons {
+	font-size: 20px;
+	cursor: pointer;
+	margin-left: 10px;
+	color: #797979;
+}
+
+tbody tr:hover {
+	background-color: #f5f5f5;
+}
+
+.table_fotter {
+	margin-top: 1rem;
+	padding: 0 30px 20px;
+}
+
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.input-field{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 10px 0 10px;
+}
+.input{
+    height: 45px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    margin-bottom: 20px;
+    color: #40414a;
+}
+
+.input-field input:focus ~ label
+   {
+    top: -10px;
+    font-size: 13px;
+  }
+  .input-field input:valid ~ label
+  {
+   top: -10px;
+   font-size: 13px;
+   color: #5d5076;
+ }
+ .input-field .input:focus, .input-field .input:valid{
+    border-bottom: 1px solid #55bb3c;
+ }
+
+ .btn-1{
+    background-color: #489c26;
+    border: none;
+    margin: 0 auto; /* Esto centrará el botón horizontalmente */
+    display: block;
+}
+
+.btn-1:hover{
+    background-color: #6acc44;
+    
+ }

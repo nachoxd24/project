@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+    position: relative;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 200px;
+}
+
+.navbar{
+    background-image: linear-gradient(to right, #55bb3c, #489c26, #047c36) ;
+}
+
+.container p {
+    margin-top: 50px; /* Ajusta el valor según el espacio que desees */
+}
+
+
+footer {
+    background-color: #f8f9fa;
+    padding: 0px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.navbar-brand {
+    font-weight: 500;
+    color: aquamarine;
+    font-size: 24px;
+    transition: 0.3s color;
+}
+
+.login-button {
+    background-color: #ffffff;
+    font-weight: 500;
+    color: #009970;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3 background-color;
+}
+
+.login-button:hover {
+    background-color: #ffffffa9;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-item {
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: rgb(255, 255, 255);
+}
+
+@media (min-width: 9991px) {
+    .nav-link::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #009970;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover:before, .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}

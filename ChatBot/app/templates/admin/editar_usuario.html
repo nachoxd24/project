@@ -1,0 +1,61 @@
+{% extends 'app/home.html' %}
+{% load static %}
+{% block content %}
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href='{% static "/lista_usuarios2.css" %}'>
+        <title>Login</title>
+    </head>
+    
+    <body>
+        <div class="wrapper">
+            <div class="container">
+            <div class="table_header">
+                <h2>Usuarios</h2>
+                <button >Crear nuevo</button>
+                <div class="input_search">
+                    <input type="search" id="searchInput" onkeyup="buscar()" placeholder="Buscar" />
+                    <i class="bi bi-search" id="search"></i>
+                </div>
+            </div>
+            <table>
+                <thead>
+                <tr>
+                    <th>Usuario </th>
+                    <th>Email  </th>
+                    <th>Opciones </i></th>
+                </tr>
+                </thead>
+                <tbody>
+                    <form method="post">
+                    {% csrf_token %}
+                    <tr>
+                        <td>
+                            <div class="input-field">
+                                <input type="text" class="input" name="username" id="username" autocomplete="off" required="" value="{{ usuario.username }}">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-field">
+                                <input type="email" class="input" name="email" id="email" autocomplete="off" required="" value="{{ usuario.email }}">
+                            </div> 
+                        </td>
+                        <td>
+                            <input type="submit" class="submit" value="Actualizar">
+                            <a href="{% url 'lista_usuarios'%}"><i class="bi bi-x-lg" id="icons"></i></a>
+                        </td>
+                    </tr>
+                    </form>
+                </tbody>
+            </table>
+            <div class="table_fotter">
+            </div>
+            </div>
+        </div>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"/>    
+    </body>
+    </html>
+{% endblock %}
